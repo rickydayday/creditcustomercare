@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CreditBank CustomerCare</title>
+	 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="https://creditbank.co.ke/discover-more/wp-content/uploads/2021/05/Favicon.png" sizes="32x32" />
+    <link rel="icon" href="https://creditbank.co.ke/discover-more/wp-content/uploads/2021/05/Favicon.png" sizes="192x192" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" /> -->
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+	  <style type="text/css">
+
+      body {
+          font-size: 12px !important;
+          font-family: 'Poppins' !important;
+          font-style: normal;
+           font-weight: 400;
+         src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+       .orange{
+          background-color: orange !important;
+        }
+        h2{
+
+          color: orange !important;
+          font-weight: bold;
+          margin-top: 1rem;
+      
+        }
+        form{
+        	padding: 10px !important;
+        }
+        .logo{
+        
+        	background-color: orange !important;
+        	margin-top: 1.5rem;
+        }
+        label{
+          font-weight: 400;
+          font-weight: bolder;
+        }
+        
+
+        .swal-title {
+ 
+ font-size: 13px;
+ /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21); */
+ 
+}
+
+.swal-text {
+  background-color: #FEFAE3;
+
+  font-size: 12px;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #000;
+}
+      
+
+
+    </style>
+
+	 <nav class="navbar orange align-items-stretch bg-white flex-md-nowrap border-bottom p-0">
+              <a class="navbar-brand">
+                <div class="d-table m-auto orange">
+                  <img width="150" height="50" id="main-logo" class="d-inline-block align-top mr-1" src="https://creditbank.co.ke/assets/img/Credit%20Bank%20PLC%20Logo.svg" alt="Shards Dashboard">
+               
+                </div>
+              </a>
+          </nav>
+
+          <div class="container text-center">
+          	<div class="fixed" id="demo">
+                 <!-- <h2 id="demo">&nbsp;</h2> -->
+          </div></div>
+
+<!-- <ion-grid>
+	<ion-row>
+       <ion-col col-12 col-xl-2 col-lg-12 col-md-4> -->
+          <div class="container">
+                  <div class="row row-cols-1 row-cols-md-2 g-4">
+                         <div class="col">      
+
+                           <img id="image" class="img-fluid float-start" src="https://www.bizmerlin.com/wp-content/uploads/2022/02/Toss-off-Feedback-on-the-Go.png" alt="">
+   
+                  </div>
+    
+
+       <div class="col">
+   <!-- <ion-col col-12 col-xl-2 col-lg-12 col-md-4> -->
+          <div class="logo w-100 shadow-lg p-3 bg-body rounded">
+ 	              <div class="container text-center w-75">
+               	<img width="150" height="50" src="https://creditbank.co.ke/assets/img/Credit%20Bank%20PLC%20Logo.svg">
+         </div> 	
+</div>
+       <form class="shadow-lg p-3 mb-5 bg-body rounded w-100">
+  <!-- Name input -->
+              <div class="row">
+                    <div class="col-sm">
+                      <div class="form-outline mb-1">
+                          <label class="form-label" for="form4Example1">Name</label>
+                             <input type="text" id="name" class="form-control " />
+                   </div>
+               </div>
+                         <div class="col-sm">
+                                <div class="form-outline mb-1">
+                                <label class="form-label" for="form4Example1">Phone</label>
+                            <input type="text" id="phone" class="form-control " />
+                          </div>
+                        </div>
+
+
+               </div>
+  
+
+  <!-- Email input -->
+
+              <div class="row">
+                        
+
+                    <div class="col-sm">
+                      <div class="form-group">
+                          <label for="exampleFormControlFile1">Channels</label>
+                          <select class="custom-select" id="channels">
+                            <option selected id="choosechannel">Choose...</option>
+                            <option value="Debit/Prepaid Cards">Debit/Prepaid Cards</option>
+                            <option value="Mobile Banking">Mobile Banking</option>
+                            <option value="Internet Banking">Internet Banking</option>
+                            <option value="ATM">ATM</option>
+          
+                           
+                    
+                          </select>
+                      </div>
+                   </div>
+
+
+    
+                    <div class="col-sm">
+                               <div class="form-outline mb-1">
+     
+                                  <label class="form-label" for="inputGroupSelect01">Branch</label>
+
+                           <select class="custom-select" id="branch">
+          <option selected id="choosebranch">Choose...</option>
+          <option value="Koinange Branch">Koinange Branch</option>
+          <option value="Westlands Branch">Westlands Branch</option>
+          <option value="Kitengela Branch">Kitengela Branch</option>
+          <option value="Lavington Branch">Lavington Branch</option>
+          <option value="Ngong Road Branch">Ngong Road Branch</option>
+          <option value="Industrial Area Branch">Industrial Area Branch</option>
+          <option value="Thika Branch">Thika Branch</option>
+          <option value="Rongai Branch">Rongai Branch</option>
+          <option value="Rongai Branch">Rongai Branch</option>
+          <option value="Nakuru Branch">Nakuru Branch</option>
+          <option value="Mombasa Nyali Branch">Mombasa Nyali Branch</option>
+          <option value="Mombasa Town Branch">Mombasa Town Branch</option>
+          <option value="Machakos Branch">Machakos Branch</option>
+          <option value="Kisii Branch">Kisii Branch</option>
+          <option value="Kisumu Branch">Kisumu Branch</option>
+          <option value="Eldoret Branch">Eldoret Branch</option>
+         <option value="3">Meru Branch</option>
+
+        </select>
+      </div>
+      
+   
+    </div>
+    </div>
+
+
+    <div class="row">
+       <div class="col-sm">
+                           <div class="form-outline mb-1">
+                                <label class="form-label" for="form4Example2">Account No</label>
+
+                                  <input type="text" id="acc" class="form-control " placeholder="optional"/>
+                         </div>
+                    </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+                   <div class="form-outline mb-1">
+                  <label class="form-label" for="form4Example1">Email Address</label>
+                     <input type="email" id="email" class="form-control " />
+                  </div>
+    </div>
+  <div class="col-sm">
+    <div class="form-outline mb-1">
+      <div class="form-outline mb-1">
+     
+        <label class="form-label" for="inputGroupSelect01">FeedBack Type</label>
+
+      <select class="custom-select" id="feedbacktype">
+        <option selected>Choose...</option>
+        <option value="Complain">Complain</option>
+        <option value="Complement">Complement</option>
+        <option value="Suggestion">Suggestion</option>
+       
+
+      </select>
+    </div>
+    </div>
+    </div>
+  
+  
+    </div>
+
+  <!-- Message input -->
+<div class="row">
+  <div class="form-outline mb-1">
+   <label class="form-label" for="form4Example3">Message</label>
+      <textarea class="form-control" id="message" rows="2"></textarea>
+  </div>
+  </div>
+
+  <!-- <div class="row">
+      <div class="col-sm">
+              <div class="form-group">
+                  <label for="exampleFormControlFile1">Add Supporting Document</label>
+                  <input type="file" class="form-control-file" id="file">
+              </div>
+           </div>
+
+      
+  </div> -->
+
+  
+  
+  <!-- Checkbox -->
+
+
+  <!-- Submit button -->
+  <div class="row">
+    <div class="col">
+  <button id="send" class="btn btn-primary  btn-block mb-1">Send</button>
+</div>
+</div>
+<div class="row">
+  <div class="col">
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="copy">
+    <label class="form-check-label" for="flexCheckDefault">
+      Do you like a copy of the feedback?
+    </label>
+  </div>
+  </div>
+  </div>
+</form>
+
+</div>
+</div>
+</div>
+
+
+<script>
+  var branch = document.getElementById('branch');
+  var choosebranch = document.getElementById('choosebranch');
+  var choosechannel = document.getElementById('choosechannel');
+
+
+  var channel= document.getElementById("channels");
+
+  choosebranch.onchange = function(){
+    channel.setAttribute('disabled',false);
+  }
+
+  choosechannel.onchange = function(){
+    branch.setAttribute('disabled',false);
+  }
+
+
+  branch.onchange = function(){
+    channel.setAttribute("disabled", true);
+
+  }
+
+  channel.onchange = function(){
+    branch.setAttribute("disabled", true);
+  }
+</script>
+
+
+
+ 
+  
+<!-- </ion-col>
+</ion-row>
+</ion-grid> -->
+
+
+
+
+
+
+
+ <script type="text/javascript">
+          	var i = 0;
+            var txt = 'Karibu CreditBank Customer FeedBacks!'; /* The text */
+
+      
+
+            var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+//   function typeWriter() {
+//   if (i < welcometext.length) {
+//     document.getElementById("demo").innerHTML += welcometext.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+//   }
+// }
+
+
+   
+// typeWriter();
+
+const items = ['Karibu CreditBank Customer Experience!', 'Welcome CreditBank Customer Experience!'];
+const delSpeed = 55;
+const typeSpeed = 125;
+const targetElm = '.type';
+
+// Code
+
+let index = 0; // index of array
+let charIndex = 0; // index of character in string
+
+function typing() {
+  if (index === items.length) {
+    index = 0;
+    setTimeout(typing, typeSpeed);
+  } else if (charIndex < items[index].length + 1) {
+    const addChar = items[index].substr(-items[index].length, charIndex);
+    document.getElementById('demo').innerHTML = `<h2>${addChar}</h2>`;
+    charIndex += 1;
+    setTimeout(typing, typeSpeed); 
+  }
+};
+
+
+
+typing();
+
+
+
+	let image = document.getElementById('image');
+
+	let images = ['https://www.bizmerlin.com/wp-content/uploads/2022/02/Toss-off-Feedback-on-the-Go.png',
+
+              	'https://www.bizmerlin.com/wp-content/uploads/2022/02/Express-Through-Emojis-and-Badges.png', 
+
+	              'https://www.bizmerlin.com/wp-content/uploads/2021/06/performance-feedback.png'];
+
+	setInterval(function() {
+	let random =Math.floor(Math.random()* 3);
+	image.src = images[random];
+	}, 10000)
+ </script>
+
+
+
+
+<script>
+  Swal.fire({
+  title: 'QRCode',
+  text: 'Scan the code to make a feedback.',
+  imageUrl: 'http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fcreditbank.co.ke%2F&qzone=1&margin=0&size=150x150&ecc=L',
+  imageWidth: 150,
+  imageHeight: 150,
+  imageAlt: 'Custom image',
+})
+</script>
+
+
+
+<script type="module" src="database/server.js"></script>
+</body>
+</html>

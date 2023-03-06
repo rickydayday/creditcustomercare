@@ -1,0 +1,249 @@
+<!doctype html>
+<html class="no-js h-100" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Any Suggestions</title>
+    <meta name="description" content="A high-quality &amp; free Bootstrap admin dashboard template pack that comes with lots of templates and components.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="styles/shards-dashboards.1.1.0.min.css">
+    <link rel="stylesheet" href="styles/extras.1.1.0.min.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.snow.css"> 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="icon" href="https://creditbank.co.ke/discover-more/wp-content/uploads/2021/05/Favicon.png" sizes="32x32" />
+   <link rel="icon" href="https://creditbank.co.ke/discover-more/wp-content/uploads/2021/05/Favicon.png" sizes="192x192" />
+
+</head>
+  <body class="h-100">
+
+    <style>
+
+      body{
+        font-size: 14px !important;
+      }
+        .orange{
+            background-color: orange !important;
+            border: orange solid;
+        }
+
+    </style>
+   
+ 
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Main Sidebar -->
+        <aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
+          <div class="main-navbar">
+            <nav class="navbar orange align-items-stretch navbar-light bg-white flex-md-nowrap border-bottom p-0">
+              <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
+                <div class="d-table m-auto">
+                  <img id="main-logo" class="d-inline-block align-top mr-1" width="150" height="50" src="https://creditbank.co.ke/assets/img/Credit%20Bank%20PLC%20Logo.svg" alt="logo">
+                </div>
+              </a>
+              <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
+                <i class="material-icons">&#xE5C4;</i>
+              </a>
+            </nav>
+          </div>
+          <form action="#" class="main-sidebar__search w-100 border-right d-sm-flex d-md-none d-lg-none">
+            <div class="input-group input-group-seamless ml-3">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+              <input class="navbar-search form-control" type="text" placeholder="Search for something..." aria-label="Search"> </div>
+          </form>
+          <div class="nav-wrapper">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                  <i class="material-icons">home</i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+           
+              <li class="nav-item">
+                <a class="nav-link" href="add-new-post.html">
+                  <i class="material-icons">note_add</i>
+                  <span>Departmental &amp; FeedBack</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="departmentfeedbacks.html">
+                  <i class="material-icons">view_module</i>
+                  <span>Bank &amp; Notifications</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active " href="suggestion.html">
+                  <i class="material-icons">table_chart</i>
+                  <span>Suggestion  &amp; Box</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="user-profile-lite.html">
+                  <i class="material-icons">person</i>
+                  <span>User Profiles</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="staffservices.html">
+                  <i class="material-icons">error</i>
+                  <span>Staff Services</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- End Main Sidebar -->
+        <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
+          <div class="main-navbar sticky-top bg-white">
+            <!-- Main Navbar -->
+            <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
+             
+              <ul class="navbar-nav border-left flex-row ">
+                <li class="nav-item border-right dropdown notifications">
+                  <a class="nav-link nav-link-icon text-center" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="nav-link-icon__wrapper">
+                      <i class="material-icons">&#xE7F4;</i>
+                    </div>
+                  </a>
+               
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img class="user-avatar rounded-circle mr-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyQoIICbA_0KiazGJlVK_qwJPCsXC7o7zBL4P2zyd2Q&s" alt="User Avatar">
+                    <span class="d-none d-md-inline-block">${user}</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-small">
+                   
+                    <div class="dropdown-divider"></div>
+                    <a id="logout" class="dropdown-item text-danger">
+                      <i class="material-icons text-danger">&#xE879;</i>Logout </a>
+                  </div>
+                </li>
+              </ul>
+              <nav class="nav">
+                <a href="#" class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left" data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
+                  <i class="material-icons">&#xE5D2;</i>
+                </a>
+              </nav>
+            </nav>
+          </div>
+          <!-- / .main-navbar -->
+          <div class="main-content-container container-fluid px-4">
+            <!-- Page Header -->
+            <div class="page-header row no-gutters py-4">
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                <h3 class="page-title">Post Suggestions</h3>
+              </div>
+            </div>
+            <!-- End Page Header -->
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <!-- Add New Post Form -->
+                <div class="col-lg-12">
+                  <div class="card card-small mb-4">
+                    <div class="card-header border-bottom">
+                      <h6 class="m-0">Account Details</h6>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item p-3">
+                        <div class="row">
+                          <div class="col">
+                            <form>
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="feFirstName">First Name</label>
+                                  <input type="text" class="form-control" id="fname" placeholder=""> </div>
+                                <div class="form-group col-md-6">
+                                  <label for="feLastName">Last Name</label>
+                                  <input type="text" class="form-control" id="lname" placeholder=""> </div>
+                              </div>
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="feEmailAddress">Email</label>
+                                  <input type="email" class="form-control" id="email" placeholder="" value=""> </div>
+                                <div class="form-group col-md-6">
+                                  <label for="fePassword">Department</label>
+                                  <input type="text" class="form-control" id="department" placeholder=""> </div>
+                              </div>
+                             
+                              <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="feDescription">Message</label>
+                                    <textarea class="form-control" name="feDescription" id="message" rows="5"></textarea>
+                                  </div>
+                              </div>
+                       
+                              <button id="send" class="btn orange btn-accent">Post Suggestions</button>
+                            </form>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- / Add New Post Form -->
+              </div>
+              <div class="col-lg-3 col-md-12">
+                <!-- Post Overview -->
+             
+            </div>
+          </div>
+          <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
+           
+            <span class="copyright ml-auto my-auto mr-2">Copyright © 2022
+              <a href="https://creditbank.co.ke" rel="nofollow">CreditBank Customer Care</a>
+            </span>
+          </footer>
+        </main>
+      </div>
+    </div>
+ 
+    </div>
+
+    <style>
+       .swal-overlay {
+  background-color: rgba(43, 165, 137, 0.45);
+}
+.swal-title {
+  margin: 0px;
+  font-size: 14px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  margin-bottom: 28px;
+}
+
+.swal-text {
+  background-color: #FEFAE3;
+  padding: 17px;
+  border: 1px solid orange;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #61534e;
+}
+    </style>
+
+    <script>
+        swal({
+            title:"Welcome To Our Suggestions Box",
+            text:'You are welcomed to make any suggestions to the companies benefit',
+            button:'okay',
+        })
+    </script>
+
+   
+
+    <script type="module" src="database/suggestions.js"></script>        
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
